@@ -47,6 +47,13 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 
 
+  video {
+    width: 100% !important;
+    height: auto !important;
+  }
+  
+ 
+
 
 
 /* Skills slider */
@@ -8524,11 +8531,13 @@ h1, h2, h3, h4, h5,
             opacity: 0; }
           @media (max-width: 1199.98px) {
             .owl-carousel.home-slider .slider-item .slider-text .one-third {
-              width: 85%; } }
+              width: 85%;
+              overflow: auto; } }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text .one-third {
               width: 100%;
-              z-index: 0; }
+              z-index: 0; 
+              overflow: auto;}
               .owl-carousel.home-slider .slider-item .slider-text .one-third .overlay {
                 opacity: .3; }
               .owl-carousel.home-slider .slider-item .slider-text .one-third:after {
@@ -8544,6 +8553,7 @@ h1, h2, h3, h4, h5,
               bottom: 0;
               right: 0;
               width: 1200px;
+              overflow: auto;
               margin: 0 auto; } }
           @media (max-width: 991.98px) {
             .owl-carousel.home-slider .slider-item .slider-text .one-forth {
@@ -8554,6 +8564,7 @@ h1, h2, h3, h4, h5,
               right: 0;
               bottom: 0;
               z-index: 1;
+              overflow: auto;
               padding: 1em; } }
           .owl-carousel.home-slider .slider-item .slider-text .one-forth .text {
             width: 100%; }
@@ -9034,7 +9045,12 @@ h1, h2, h3, h4, h5,
     transition: all 0.3s ease; }
     @media (max-width: 767.98px) {
       .project .overlay {
-        opacity: .2; } }
+        opacity: 0; }
+        .project .text{
+          display: none;
+        }
+       }
+
   .project .text {
     max-width: 80%;
     z-index: 1;
